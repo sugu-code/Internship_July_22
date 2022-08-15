@@ -1,0 +1,10 @@
+tot=100
+m=500
+sd=80
+p=0.95
+z=1.96
+sd=sd/tot**(0.5)
+result1=m-sd*z
+result2=m+sd*z
+print(round(result1,2))
+print(round(result2,2))
