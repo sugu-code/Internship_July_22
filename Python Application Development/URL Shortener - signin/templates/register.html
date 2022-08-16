@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Register
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post">
+    <input type="text" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="confirm_password" placeholder="Confirm Password">
+
+    <button>Register</button>
+</form>
+
+{% endblock %}

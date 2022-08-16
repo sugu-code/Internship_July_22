@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Add
+{% endblock %}
+
+{% block content %}
+    <div id="main-body">
+        <div>
+            <form action="/add" method="post">
+                <label>Enter the Main URL:</label>
+                <input type="text" name="in_1" placeholder="https://www.google.com" required>
+                <input type="submit" value="Submit"><br><br>
+            </form>
+        </div>
+        <div>
+            <label>Short URL</label>
+            <input type="text" value="{{shorter}}" id="myInput" placeholder="Short URL will be displayed here">
+            <input type="submit" onclick="myFunction()" value="copy URL">
+        </div>
+    </div>
+    <script>
+        function myFunction(){
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            copyText.setSelectionRange(0,99999);
+            navigator.clipboard.writeText(copyText.value);
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
+{% endblock%}
