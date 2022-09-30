@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex-Clone</title>
+</head>
+<body bgcolor="#F3F77A">
+    <center>
+    <h1 style="color: red">Welcome to the Clone of regex101.com</h1>
+    <form action="" method="POST">
+        <label>Regular Expression</label>
+        <input type="text" name="in_1" placeholder="RegEX"><br><br>
+        <label>Test String</label>
+        <textarea rows="6" cols="30" name="in_2" placeholder="insert test string"></textarea><br><br>
+        <button>Submit</button>
+    </form>
+    <h2>
+        <p>These are your input details: <br><br>
+            Regex:{{regex}}  <br><br>
+            String:{{string}}
+        </p>
+    </h2>
+        {% if match|length %}
+            <h2 style="color:#c71515">Match Found</h2>
+            <b>
+            Total no of matches in given string is:{{result}} <br><br>
+            match:{{match}} <br><br>
+
+            {% for i in range(result) %}
+                Match-{{i+1}}, of {{regex}} at Start index: {{match[i][0]}} and End index :{{match[i][1]}} <br>
+            {% endfor %}
+        {% else %}
+            <h2>Match Not Found</h2>
+        {% endif %}
+            </b>
+</body>
+</html>
