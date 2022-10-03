@@ -1,0 +1,24 @@
+artifact_path: model
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.1
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.0.2
+mlflow_version: 1.29.0
+model_uuid: fee69e34e85e4c1ba8b2695062e79aa7
+run_id: 2547aa809c44473dab2fff199199358e
+signature:
+  inputs: '[{"name": "carat", "type": "double"}, {"name": "table%", "type": "double"},
+    {"name": "length", "type": "double"}, {"name": "width", "type": "double"}, {"name":
+    "depth", "type": "double"}, {"name": "L/W", "type": "double"}, {"name": "color",
+    "type": "long"}, {"name": "cut", "type": "long"}, {"name": "clarity", "type":
+    "long"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+utc_time_created: '2022-10-03 09:44:01.867077'
